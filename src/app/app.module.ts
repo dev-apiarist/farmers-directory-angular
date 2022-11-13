@@ -14,6 +14,10 @@ import { FormsModule } from '@angular/forms';
 
 import { CardComponent } from './shared/components/card/card.component';
 import { FarmersComponent } from './modules/pages/farmers/farmers.component';
+
+import { AboutComponent } from './modules/pages/about/about.component';
+
+
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 // import { InterceptInterceptor } from './services/intercept.interceptor';
 import { LivestockComponent } from './modules/livestock/livestock.component';
@@ -31,6 +35,9 @@ import { CropsComponent } from './pages/crops/crops.component';
     FooterComponent,
 
     FarmersDetailsComponent,
+
+      AboutComponent,
+
     CropsComponent,
     LivestockComponent,
   ],
@@ -41,6 +48,7 @@ import { CropsComponent } from './pages/crops/crops.component';
     RouterModule,
     Ng2SearchPipeModule,
     FormsModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent],
