@@ -5,6 +5,7 @@ import { HomeComponent } from './modules/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
 import { LivestockComponent } from './modules/livestock/livestock.component';
+import { CreateAccountComponent } from './pages/create-account/create-account.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -14,10 +15,11 @@ const routes: Routes = [
 
   { path: 'details', component: FarmersDetailsComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' },
-
-  { path: '**', redirectTo: 'home' },
   { path: 'farmer/:id', component: FarmersDetailsComponent },
   { path: 'categories/:id', component: LivestockComponent },
+  { path: 'create-account', component: CreateAccountComponent },
+
+  { path: '**', redirectTo: 'home' },
 ];
 
 @NgModule({

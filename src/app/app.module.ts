@@ -17,12 +17,15 @@ import { FarmersComponent } from './modules/pages/farmers/farmers.component';
 
 import { AboutComponent } from './modules/pages/about/about.component';
 
-
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { InterceptInterceptor } from './services/intercept.interceptor';
 import { LivestockComponent } from './modules/livestock/livestock.component';
 import { RouterModule } from '@angular/router';
+import { MatDialogModule } from '@angular/material/dialog';
 import { CropsComponent } from './pages/crops/crops.component';
+import { SignInModalComponent } from './pages/sign-in-modal/sign-in-modal.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CreateAccountComponent } from './pages/create-account/create-account.component';
 
 @NgModule({
   declarations: [
@@ -36,10 +39,12 @@ import { CropsComponent } from './pages/crops/crops.component';
 
     FarmersDetailsComponent,
 
-      AboutComponent,
+    AboutComponent,
 
     CropsComponent,
     LivestockComponent,
+    SignInModalComponent,
+    CreateAccountComponent,
   ],
   imports: [
     HttpClientModule,
@@ -48,7 +53,8 @@ import { CropsComponent } from './pages/crops/crops.component';
     RouterModule,
     Ng2SearchPipeModule,
     FormsModule,
-
+    BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [
     {

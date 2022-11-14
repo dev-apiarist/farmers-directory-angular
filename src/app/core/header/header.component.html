@@ -20,12 +20,12 @@
       <p class="hidden lg:block">Locations</p>
     </div>
     <div class="grid grid-cols-2 gap-2">
-      <div class="flex gap-5">
+      <div class="flex gap-5" (click)="openDialog()">
         <span class="text-mainGreen"><i class="fa-solid fa-lock"></i></span>
 
         <p class="hidden lg:block">Sign In</p>
       </div>
-      <div class="flex gap-5">
+      <div class="flex gap-5" [routerLink]="['create-account']">
         <span class="text-mainGreen"><i class="fa-solid fa-user"></i></span>
         <p class="hidden lg:block">Create Account</p>
       </div>
@@ -141,4 +141,3 @@
     </nav>
   </div>
 </header>
-
