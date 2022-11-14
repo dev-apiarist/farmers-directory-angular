@@ -11,7 +11,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 
 import { FormsModule } from '@angular/forms';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatFormFieldModule } from '@angular/material/form-field';
 
 import { CardComponent } from './shared/components/card/card.component';
 import { FarmersComponent } from './modules/pages/farmers/farmers.component';
@@ -29,9 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
 import { MatInputModule } from '@angular/material/input';
 import { ConsumerLoginComponent } from './modules/consumer-login/consumer-login.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ReactiveFormsModule } from '@angular/forms';
-import {MatSelectModule} from '@angular/material/select';
+import { MatSelectModule } from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -40,27 +39,25 @@ import {MatSelectModule} from '@angular/material/select';
     HeaderComponent,
     CardComponent,
 
-
     FarmersComponent,
     FooterComponent,
 
     FarmersDetailsComponent,
-      CropsComponent,
+    CropsComponent,
   ],
-  imports: [BrowserModule,
-            AppRoutingModule,
-            RouterModule,
-            Ng2SearchPipeModule,
-            FormsModule,
-            MatInputModule,
-            BrowserAnimationsModule,
-            MatFormFieldModule,
-            ReactiveFormsModule,
-            MatSelectModule
-            
-            
-          ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    RouterModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    MatInputModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
