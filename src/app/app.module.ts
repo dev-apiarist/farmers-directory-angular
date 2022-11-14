@@ -44,8 +44,15 @@ import { MatSelectModule } from '@angular/material/select';
 
     FarmersDetailsComponent,
     CropsComponent,
+    ConsumerLoginComponent,
+    CreateAccountComponent,
+    SignInModalComponent,
+    LivestockComponent,
+
+    AboutComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule,
@@ -56,8 +63,15 @@ import { MatSelectModule } from '@angular/material/select';
     MatFormFieldModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatDialogModule,
   ],
-  providers: [],
+  providers: [
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: InterceptInterceptor,
+      multi: true,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
