@@ -11,6 +11,7 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 
 import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { CardComponent } from './shared/components/card/card.component';
 import { FarmersComponent } from './modules/pages/farmers/farmers.component';
@@ -26,6 +27,11 @@ import { CropsComponent } from './pages/crops/crops.component';
 import { SignInModalComponent } from './pages/sign-in-modal/sign-in-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CreateAccountComponent } from './pages/create-account/create-account.component';
+import { MatInputModule } from '@angular/material/input';
+import { ConsumerLoginComponent } from './modules/consumer-login/consumer-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -34,35 +40,27 @@ import { CreateAccountComponent } from './pages/create-account/create-account.co
     HeaderComponent,
     CardComponent,
 
+
     FarmersComponent,
     FooterComponent,
 
     FarmersDetailsComponent,
-
-    AboutComponent,
-
-    CropsComponent,
-    LivestockComponent,
-    SignInModalComponent,
-    CreateAccountComponent,
+      CropsComponent,
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    Ng2SearchPipeModule,
-    FormsModule,
-    BrowserAnimationsModule,
-    MatDialogModule,
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: InterceptInterceptor,
-      multi: true,
-    },
-  ],
+  imports: [BrowserModule,
+            AppRoutingModule,
+            RouterModule,
+            Ng2SearchPipeModule,
+            FormsModule,
+            MatInputModule,
+            BrowserAnimationsModule,
+            MatFormFieldModule,
+            ReactiveFormsModule,
+            MatSelectModule
+            
+            
+          ],
+  providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
