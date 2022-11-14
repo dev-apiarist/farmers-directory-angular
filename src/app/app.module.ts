@@ -10,11 +10,17 @@ import { FooterComponent } from './core/footer/footer.component';
 
 import { FarmersDetailsComponent } from './modules/pages/farmers-details/farmers-details.component';
 import { FormsModule } from '@angular/forms';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 import { CardComponent } from './shared/components/card/card.component';
 import { FarmersComponent } from './modules/pages/farmers/farmers.component';
 import { RouterModule } from '@angular/router';
 import { CropsComponent } from './pages/crops/crops.component';
+import { MatInputModule } from '@angular/material/input';
+import { ConsumerLoginComponent } from './modules/consumer-login/consumer-login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule } from '@angular/forms';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -23,14 +29,28 @@ import { CropsComponent } from './pages/crops/crops.component';
     HeaderComponent,
     CardComponent,
 
+
     FarmersComponent,
     FooterComponent,
 
     FarmersDetailsComponent,
-      CropsComponent,
+    CropsComponent,
+    ConsumerLoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, RouterModule, Ng2SearchPipeModule, FormsModule],
+  imports: [BrowserModule,
+            AppRoutingModule,
+            RouterModule,
+            Ng2SearchPipeModule,
+            FormsModule,
+            MatInputModule,
+            BrowserAnimationsModule,
+            MatFormFieldModule,
+            ReactiveFormsModule,
+            MatSelectModule
+            
+            
+          ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

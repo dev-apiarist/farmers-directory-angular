@@ -3,7 +3,6 @@ import { FarmersComponent } from './modules/pages/farmers/farmers.component';
 import { HomeComponent } from './modules/home/home.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes, Router } from '@angular/router';
-import { FarmersDetailsComponent } from './modules/farmers-details/farmers-details.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
