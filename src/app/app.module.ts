@@ -31,6 +31,11 @@ import { MatInputModule } from '@angular/material/input';
 import { ConsumerLoginComponent } from './modules/consumer-login/consumer-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
+import { AdminComponent } from './modules/admin/admin.component';
+import { ProducersComponent } from './modules/admin/producers/producers.component';
+import { ConsumersComponent } from './modules/admin/consumers/consumers.component';
+import { ProductsComponent } from './modules/admin/products/products.component';
+import { CategoriesComponent } from './modules/admin/categories/categories.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +55,11 @@ import { MatSelectModule } from '@angular/material/select';
     LivestockComponent,
 
     AboutComponent,
+    AdminComponent,
+    ProducersComponent,
+    ConsumersComponent,
+    ProductsComponent,
+    CategoriesComponent,
   ],
   imports: [
     HttpClientModule,
