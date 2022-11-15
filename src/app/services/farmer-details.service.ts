@@ -12,7 +12,7 @@ export class FarmerDetailsService {
 
   private REST_API_URL = "https://farmers-directory.vercel.app/api/v1/farmers"
 
-  private HTTP_HEADER = new HttpHeaders({'content-type': 'application/json', "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmE2NDE3MTA1MTFhZGE4ZGY1MjEwYSIsImVtYWlsIjoibmlvbG9zMjExM0BnbWFpbC5jb20iLCJpc1N1cGVyQWRtaW4iOnRydWUsImlhdCI6MTY2ODE5MTIyOSwiZXhwIjoxNjY4MTk0ODI5fQ.D6w5j17VV0LtYvbptcmcVK5lDQ0PT0JqpMQMrJsKOfY"})
+  private HTTP_HEADER = new HttpHeaders({'content-type': 'application/json', "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmE2NDE3MTA1MTFhZGE4ZGY1MjEwYSIsImVtYWlsIjoibmlvbG9zMjExM0BnbWFpbC5jb20iLCJpc1N1cGVyQWRtaW4iOnRydWUsImlhdCI6MTY2ODQ1MDMyNSwiZXhwIjoxNjY4NDUzOTI1fQ.fo9cpTLnKHjtnu4Qtqq3jWVDpcnA3m72R3SKg7uZ5bQ"})
    
 
   constructor(private http: HttpClient) {
@@ -21,7 +21,7 @@ export class FarmerDetailsService {
   
 
   getFarmerById(id:string): Observable<farmerDetails | any>{
-    const thisUrl = `${this.REST_API_URL}/634d9d74d9d76d19c6bbeb56`;
+    const thisUrl = `${this.REST_API_URL}/${id}`;
     return this.http.get<farmerDetails>(thisUrl,{headers:this.HTTP_HEADER}).pipe(
       tap(farmerDetails =>{
         console.log(`this Subscriber = ${JSON.stringify(farmerDetails)}`);        

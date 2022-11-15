@@ -20,6 +20,9 @@ const routes: Routes = [
   { path: 'create-account', component: CreateAccountComponent },
 
   { path: '**', redirectTo: 'home' },
+  { path: 'farmer/:id', component: FarmersDetailsComponent},
+  {path: 'categories/:id', component: LivestockComponent},
+  {path:'farmer-details/:id', component:FarmersDetailsComponent},
 ];
 
 @NgModule({
