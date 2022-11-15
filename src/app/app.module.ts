@@ -36,6 +36,8 @@ import { ProducersComponent } from './modules/admin/producers/producers.componen
 import { ConsumersComponent } from './modules/admin/consumers/consumers.component';
 import { ProductsComponent } from './modules/admin/products/products.component';
 import { CategoriesComponent } from './modules/admin/categories/categories.component';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -43,17 +45,14 @@ import { CategoriesComponent } from './modules/admin/categories/categories.compo
     HomeComponent,
     HeaderComponent,
     CardComponent,
-
     FarmersComponent,
     FooterComponent,
-
     FarmersDetailsComponent,
     CropsComponent,
     ConsumerLoginComponent,
     CreateAccountComponent,
     SignInModalComponent,
     LivestockComponent,
-
     AboutComponent,
     AdminComponent,
     ProducersComponent,
@@ -73,6 +72,9 @@ import { CategoriesComponent } from './modules/admin/categories/categories.compo
     MatFormFieldModule,
     ReactiveFormsModule,
     MatSelectModule,
+    MatMenuModule,
+    MatIconModule,
+
     MatDialogModule,
   ],
   providers: [
