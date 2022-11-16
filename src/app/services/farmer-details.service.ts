@@ -12,7 +12,7 @@ export class FarmerDetailsService {
 
   private REST_API_URL = "https://farmers-directory.vercel.app/api/v1/farmers"
 
-  private HTTP_HEADER = new HttpHeaders({'content-type': 'application/json', "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmE2NDE3MTA1MTFhZGE4ZGY1MjEwYSIsImVtYWlsIjoibmlvbG9zMjExM0BnbWFpbC5jb20iLCJpc1N1cGVyQWRtaW4iOnRydWUsImlhdCI6MTY2ODU5NTA5MiwiZXhwIjoxNjY4NTk4NjkyfQ.kmFuCuFY-OSjmpn-zi347Q988zSr8ZqkpBhs-WQjNNg"})
+  private HTTP_HEADER = new HttpHeaders({'content-type': 'application/json', "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzNmE2NDE3MTA1MTFhZGE4ZGY1MjEwYSIsImVtYWlsIjoibmlvbG9zMjExM0BnbWFpbC5jb20iLCJpc1N1cGVyQWRtaW4iOnRydWUsImlhdCI6MTY2ODYwNzU3OCwiZXhwIjoxNjY4NjExMTc4fQ.c1XFSOzHKPMylEVb35jB0cW-adYTL58bNr6_tYCvmXs"})
 
 
   constructor(private http: HttpClient) {
