@@ -1,9 +1,8 @@
+import { CategoryService } from './../services/category.service';
 import { Component, OnInit } from '@angular/core';
-import { CategoryService } from 'src/app/services/category.service';
-import { categories } from 'src/app/models/categories';
-import { SignInModalComponent } from 'src/app/pages/sign-in-modal/sign-in-modal.component';
+import { categories } from 'src/app/shared/models/categories';
+import { SignInModalComponent } from 'src/app/modules/forms/sign-in-modal/sign-in-modal.component';
 import { MatDialog } from '@angular/material/dialog';
-import { CreateAccountComponent } from 'src/app/pages/create-account/create-account.component';
 
 @Component({
   selector: 'app-header',

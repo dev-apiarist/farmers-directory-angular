@@ -1,5 +1,5 @@
-import { Product } from './product';
-import { products } from 'src/app/models/products';
+import { products } from './products';
+
 export interface Farmer {
   _id: String;
   fname: String;
@@ -11,6 +11,6 @@ export interface Farmer {
   image: String;
 
   // products:any;
-  products?:products[];
+  products?: products[];
   // produce?: products[];
 }

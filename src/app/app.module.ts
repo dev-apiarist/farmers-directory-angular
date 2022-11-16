@@ -1,3 +1,9 @@
+import { InterceptInterceptor } from './core/services/intercept.interceptor';
+import { LivestockComponent } from './modules/pages/livestock/livestock.component';
+import { SignInModalComponent } from './modules/forms/sign-in-modal/sign-in-modal.component';
+import { CreateAccountComponent } from './modules/forms/create-account/create-account.component';
+import { ConsumerLoginComponent } from './modules/forms/consumer-login/consumer-login.component';
+import { CropsComponent } from './modules/pages/crops/crops.component';
 import { FarmersDetailsComponent } from './modules/pages/farmers-details/farmers-details.component';
 
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
@@ -19,16 +25,10 @@ import { FarmersComponent } from './modules/pages/farmers/farmers.component';
 import { AboutComponent } from './modules/pages/about/about.component';
 
 import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { InterceptInterceptor } from './services/intercept.interceptor';
-import { LivestockComponent } from './modules/livestock/livestock.component';
 import { RouterModule } from '@angular/router';
 import { MatDialogModule } from '@angular/material/dialog';
-import { CropsComponent } from './pages/crops/crops.component';
-import { SignInModalComponent } from './pages/sign-in-modal/sign-in-modal.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { CreateAccountComponent } from './pages/create-account/create-account.component';
 import { MatInputModule } from '@angular/material/input';
-import { ConsumerLoginComponent } from './modules/consumer-login/consumer-login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatSelectModule } from '@angular/material/select';
 import { AdminComponent } from './modules/admin/admin.component';

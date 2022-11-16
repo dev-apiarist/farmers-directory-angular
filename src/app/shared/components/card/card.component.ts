@@ -1,7 +1,7 @@
-import { Farmer } from './../models/farmer';
-import { Product } from './../models/product';
+import { Farmer } from '../../models/farmer';
 import { Component, Input, OnInit } from '@angular/core';
-import { products } from 'src/app/models/products';
+
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-card',

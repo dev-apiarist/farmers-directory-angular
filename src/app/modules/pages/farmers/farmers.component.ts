@@ -1,6 +1,5 @@
-import { Farmer } from './../../../shared/components/models/farmer';
+import { FarmerDetailsService } from './../../../core/services/farmer-details.service';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { FarmerDetailsService } from 'src/app/services/farmer-details.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
@@ -9,50 +8,42 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./farmers.component.scss'],
 })
 export class FarmersComponent implements OnInit {
-
-  farmers: any [] = [];
+  farmers: any[] = [];
   term!: string;
-  enteredSearchValue: string = "";
+  enteredSearchValue: string = '';
 
   @Output()
   searchTextChanged: EventEmitter<string> = new EventEmitter<string>();
 
-  onSearchTextChanged(){
+  onSearchTextChanged() {
     this.searchTextChanged.emit(this.enteredSearchValue);
   }
 
-  searchText: string = "";
+  searchText: string = '';
 
-
-
-  hello: string = "hello";
-  onSearchTextEntered(searchValue: string){
+  hello: string = 'hello';
+  onSearchTextEntered(searchValue: string) {
     this.searchText = searchValue;
     console.log(this.searchText);
   }
 
   constructor(
-     private farmerService : FarmerDetailsService,
-     private route : ActivatedRoute,
-  ) {
-
-  }
-
-
+    private farmerService: FarmerDetailsService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
     this.getFarmers();
   }
 
-  getFarmers(){
+  getFarmers() {
+    // this.rosterService.getAllAgents().subscribe(request => this.agents = request.data);
+    this.farmerService
+      .getAllFarmers()
+      .subscribe((request) => (this.farmers = request.data));
+  }
 
-      // this.rosterService.getAllAgents().subscribe(request => this.agents = request.data);
-      this.farmerService.getAllFarmers().subscribe(request => this.farmers = request.data);
-
-  };
-
-
- // farmers: Farmer[] = [
+  // farmers: Farmer[] = [
   //   {
   //     id: 'Main Produce',
 
@@ -96,9 +87,4 @@ export class FarmersComponent implements OnInit {
   //     ],
   //   },
   // ];
-
-
 }
-
-
-
