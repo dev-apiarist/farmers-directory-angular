@@ -1,5 +1,7 @@
 import { Farmer } from './../../../shared/components/models/farmer';
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { FarmerDetailsService } from 'src/app/services/farmer-details.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-farmers',
@@ -8,6 +10,7 @@ import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 })
 export class FarmersComponent implements OnInit {
 
+  farmers: any [] = [];
   term!: string;
   enteredSearchValue: string = "";
 
@@ -28,60 +31,74 @@ export class FarmersComponent implements OnInit {
     console.log(this.searchText);
   }
 
-  constructor() {
+  constructor(
+     private farmerService : FarmerDetailsService,
+     private route : ActivatedRoute,
+  ) {
 
   }
 
 
 
   ngOnInit(): void {
-
+    this.getFarmers();
   }
 
-  farmers: Farmer[] = [
-    {
-      id: 'Main Produce',
+  getFarmers(){
 
-      name: 'John Brown',
-      image:
-        'https://images.pexels.com/photos/2382665/pexels-photo-2382665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      produce: [
-        {
-          name: 'Potato',
-        },
-        {
-          name: 'Yam',
-        },
-        {
-          name: 'Banana',
-        },
-        {
-          name: 'Orange',
-        },
-      ],
-    },
-    {
-      id: 'Main Produce',
+      // this.rosterService.getAllAgents().subscribe(request => this.agents = request.data);
+      this.farmerService.getAllFarmers().subscribe(request => this.farmers = request.data);
 
-      name: 'Paul Dunn',
-      image:
-        'https://images.pexels.com/photos/916406/pexels-photo-916406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
-      produce: [
-        {
-          name: 'Potato',
-        },
-        {
-          name: 'Yam',
-        },
-        {
-          name: 'Banana',
-        },
-        {
-          name: 'Orange',
-        },
-      ],
-    },
-  ];
+  };
+
+
+ // farmers: Farmer[] = [
+  //   {
+  //     id: 'Main Produce',
+
+  //     name: 'John Brown',
+  //     image:
+  //       'https://images.pexels.com/photos/2382665/pexels-photo-2382665.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  //     produce: [
+  //       {
+  //         name: 'Potato',
+  //       },
+  //       {
+  //         name: 'Yam',
+  //       },
+  //       {
+  //         name: 'Banana',
+  //       },
+  //       {
+  //         name: 'Orange',
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 'Main Produce',
+
+  //     name: 'Paul Dunn',
+  //     image:
+  //       'https://images.pexels.com/photos/916406/pexels-photo-916406.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1',
+  //     produce: [
+  //       {
+  //         name: 'Potato',
+  //       },
+  //       {
+  //         name: 'Yam',
+  //       },
+  //       {
+  //         name: 'Banana',
+  //       },
+  //       {
+  //         name: 'Orange',
+  //       },
+  //     ],
+  //   },
+  // ];
+
+
 }
+
 
 

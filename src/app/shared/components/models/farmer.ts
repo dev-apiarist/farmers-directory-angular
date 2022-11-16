@@ -1,8 +1,16 @@
 import { Product } from './product';
+import { products } from 'src/app/models/products';
 export interface Farmer {
-  id: String;
-  name: String;
+  _id: String;
+  fname: String;
+  lname: String;
+  farmer_type: String;
+  description: String;
+  phone: String;
+  email: String;
   image: String;
 
-  produce?: Product[];
+  // products:any;
+  products?:products[];
+  // produce?: products[];
 }
