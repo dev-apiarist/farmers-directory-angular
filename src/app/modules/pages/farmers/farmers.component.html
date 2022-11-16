@@ -2,5 +2,10 @@
 
 <input type="text" class="searchBar" placeholder="Search Farmer..." [(ngModel)]="term">
 
-<app-card *ngFor="let farmer of farmers | filter: term" [farmer]="farmer"></app-card>
+<app-card *ngFor="let farmer of farmers | filter: term" [farmer]="farmer">
+
+ 
+</app-card>
+
+
 
