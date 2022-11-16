@@ -1,4 +1,4 @@
-<section *ngIf="getFarmer">
+<section>
     <div class="banner">
         <div class="overlay">
             <div class="image">
@@ -17,6 +17,9 @@
     <div class="produce">
         <div class="divider">
             <h1>Produce</h1>
+        </div>
+        <div class="defaultMes" *ngIf="waiting">
+            <h2 > Sorry this Faremer does not currently have any Products being sold </h2>
         </div>
         <div class="prodOption">
             <div class="prodBtn" *ngFor="let produce of allProducts" >{{produce.prod_name}}</div>

@@ -22,6 +22,7 @@ export class FarmersDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     let id = this.route.snapshot.params["id"];
+
     console.log(id)
     this.getFarmerById(id)
   }
@@ -29,20 +30,24 @@ export class FarmersDetailsComponent implements OnInit {
   getFarmerById( id: string){
     this.FarmerDetalsService.getFarmerById(id).subscribe(farmer=>{
       this.getFarmer = farmer.data;
-      this.waiting = false
+      if(this.getFarmer.products.length){
+        this.waiting = false
+      }
       for(let counter = 0; counter < this.getFarmer.products.length; counter++){
-        // console.log(this.getFarmer.products[counter])
-        let id = this.getFarmer.products[counter]
-        this.getProductById(id)
+        console.log(this.getFarmer.products[counter])
+        this.allProducts.push(this.getFarmer.products[counter])
+        // let id = this.getFarmer.products
+        // this.getProductById(id)
       }
       
     })
   }
 
-  getProductById(id:string){
-    this.ProductsService.getProductById(id).subscribe(prod=>{
-      this.allProducts.push(prod.data);
-    })
-  }
+  // getProductById(id:string){
+  //   this.ProductsService.getProductById(id).subscribe(prod=>{
+  //     this.allProducts.push(prod.data);
+  //     console.log(this.allProducts)
+  //   })
+  // }
 
 }
