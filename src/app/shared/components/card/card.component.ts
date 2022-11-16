@@ -1,3 +1,5 @@
+import { Farmer } from './../models/farmer';
+import { Product } from './../models/product';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -6,7 +8,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./card.component.scss'],
 })
 export class CardComponent implements OnInit {
-  @Input() item: any;
+  @Input() farmer!: Farmer;
+
+  @Input() product!: Product;
+
   constructor() {}
 
   ngOnInit(): void {}

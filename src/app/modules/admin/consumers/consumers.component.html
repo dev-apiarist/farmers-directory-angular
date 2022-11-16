@@ -1,0 +1,58 @@
+<div class="max-w-screen-xl px-4 py-16 sm:px-6 lg:px-8">
+  <div class="max-w-xl">
+    <h2 class="text-3xl font-bold sm:text-4xl text-[#2E9250]">Consumers</h2>
+  </div>
+
+  <div
+    class="overflow-hidden overflow-x-auto rounded-lg border border-gray-200 mt-10"
+  >
+    <table class="min-w-full divide-y divide-gray-200 text-sm">
+      <thead class="bg-gray-100">
+        <tr>
+          <th
+            class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900"
+          >
+            <div class="flex items-center gap-2">Name</div>
+          </th>
+
+          <th
+            class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900"
+          >
+            <div class="flex items-center gap-2">Email</div>
+          </th>
+          <th
+            class="whitespace-nowrap px-4 py-2 text-left font-medium text-gray-900"
+          >
+            <div class="flex items-center gap-2">Telephone</div>
+          </th>
+
+          <th class="px-4 py-2"></th>
+        </tr>
+      </thead>
+
+      <tbody class="divide-y divide-gray-200">
+        <tr>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+            Farmer Clarke
+          </td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+            clarkeybarkey@gmail.com
+          </td>
+          <td class="whitespace-nowrap px-4 py-2 text-gray-700">
+            + 1 876-436-5757
+          </td>
+
+          <td class="whitespace-nowrap px-4 py-2">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+              <button mat-menu-item>Edit</button>
+              <button mat-menu-item>Delete</button>
+            </mat-menu>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

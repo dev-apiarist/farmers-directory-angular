@@ -1,3 +1,4 @@
+import { Product } from './../../shared/components/models/product';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -10,77 +11,72 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  produce = [
+  produce: Product[] = [
     {
-      url: '',
-      content: 'Tomato',
+      id: 'Region',
+      url: 'farmers',
+      name: 'Tomato',
       image: 'assets/images/featured-produce/tomatoes.png',
     },
     {
-      url: '',
-      content: 'Lettuce',
+      id: 'Region',
+
+      url: 'farmers',
+
+      name: 'Lettuce',
       image: 'assets/images/featured-produce/lettuce.png',
     },
     {
-      url: '',
-      content: 'Berry',
+      id: 'Region',
+      url: 'farmers',
+
+      name: 'Berry',
       image: 'assets/images/featured-produce/berries.png',
     },
     {
-      url: '',
-      content: 'Watermelon',
+      id: 'Region',
+
+      url: 'farmers',
+
+      name: 'Watermelon',
       image: 'assets/images/featured-produce/melon.png',
     },
     {
-      url: '',
-      content: 'Pineapple',
+      id: 'Region',
+
+      url: 'farmers',
+
+      name: 'Pineapple',
       image: 'assets/images/featured-produce/pineapple.png',
     },
     {
-      url: '',
-      content: 'Banana',
+      id: 'Region',
+
+      url: 'farmers',
+
+      name: 'Banana',
       image: 'assets/images/featured-produce/banana.png',
     },
   ];
 
-  inSeason = [
+  inSeason: Product[] = [
     {
-      url: '',
-      content: 'Carrots',
+      id: 'Region',
+
+      url: 'farmers',
+
+      name: 'Carrots',
       image: 'assets/images/in-season/carrots.png',
-      regions: [
-        {
-          name: 'Clarendon',
-        },
-        {
-          name: 'Kingston',
-        },
-        {
-          name: 'St James',
-        },
-        {
-          name: 'St. Ann',
-        },
-      ],
+      regions: ['Clarendon', 'Kingston'],
     },
     {
-      url: '',
-      content: 'Parsley',
+      id: 'Region',
+
+      url: 'farmers',
+
+      name: 'Parsley',
       image: 'assets/images/in-season/parsley.png',
-      regions: [
-        {
-          name: 'Clarendon',
-        },
-        {
-          name: 'Kingston',
-        },
-        {
-          name: 'St James',
-        },
-        {
-          name: 'St. Ann',
-        },
-      ],
+      regions: ['Clarendon', 'Kingston'],
     },
   ];
 }

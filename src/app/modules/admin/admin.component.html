@@ -1,0 +1,48 @@
+<aside
+  class="ml-[-100%] fixed z-10 top-0 pb-3 px-6 w-full flex flex-col justify-between h-screen border-r bg-[#363941] transition duration-300 md:w-4/12 lg:ml-0 lg:w-[25%] xl:w-[15%] text-white"
+>
+  <div>
+    <div class="-mx-6 px-6 py-4 bg-[#F7F7F7]">
+      <a class="flex items-center justify-center">
+        <img
+          src="assets/icons/logo.png"
+          class="bg-white rounded-full object-cover"
+        />
+      </a>
+    </div>
+
+    <ul class="tracking-wide -mx-6">
+      <h1 class="text-center py-10 font-bold text-lg bg-[#91BC56] uppercase">
+        Admin Panel
+      </h1>
+
+      <li *ngFor="let link of links">
+        <button
+          class="group relative inline-block w-full overflow-hidden px-8 py-8"
+          [routerLink]="link.url"
+        >
+          <span
+            class="absolute inset-y-0 left-0 w-2 bg-[#5AC980] transition-all group-hover:w-full"
+          ></span>
+
+          <span class="relative text-lg font-medium">
+            {{ link.name }}
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <button class="px-4 py-3 flex items-center space-x-4 rounded-md">
+    <span><i class="fa-solid fa-power-off"></i></span>&nbsp; Logout
+  </button>
+</aside>
+
+<div class="ml-auto mb-6 lg:w-[75%] xl:w-[85%]">
+  <div
+    class="sticky top-0 h-28 border-b bg-[#94E7B0] lg:py-2.5 flex items-center"
+  >
+    <h1 class="px-10 uppercase text-3xl font-bold text-[#1C6B37]">Dashboard</h1>
+  </div>
+  <router-outlet></router-outlet>
+</div>

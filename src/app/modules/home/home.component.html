@@ -55,32 +55,31 @@
     </div>
 
     <div class="mt-8 grid grid-cols-2 gap-x-8 gap-y-8 lg:grid-cols-3">
-      <a
-        href="#"
-        class="block hover:shadow-lg"
-        *ngFor="let featured of produce"
-      >
+      <div class="block hover:shadow-lg" *ngFor="let featured of produce">
         <img
           alt=""
           src="{{ featured.image }}"
-          class="w-3/4 object-contain mx-auto aspect-square"
+          class="w-1/2 object-contain mx-auto aspect-square"
         />
 
         <div
           class="mt-4 flex items-center justify-center font-semibold p-5 text-xl flex-wrap"
         >
           <p class="w-full text-center text-base md:text:lg lg:text-3xl">
-            {{ featured.content }}
+            {{ featured.name }}
           </p>
-
+          <!-- routerLink="{{ featured.url }}" -->
           <button
-            routerLink="{{ featured.url }}"
+
+          routerLink="{{ 'featured.url }}"
+
+
             class="text-xs uppercase rounded-full tracking-wide text-white px-4 py-3 bg-green-600 md:text-sm lg:text-base mt-5"
           >
             View Farmers
           </button>
         </div>
-      </a>
+      </div>
     </div>
   </div>
 </section>
@@ -111,7 +110,7 @@
     <br />
     <span class="inline-block h-px w-full bg-black"></span>
   </div>
-  <app-card [item]="produce" *ngFor="let produce of inSeason"></app-card>
+  <app-card [product]="produce" *ngFor="let produce of inSeason"></app-card>
   <ol class="flex justify-end gap-1 text-xs font-medium mt-10">
     <li>
       <a
@@ -180,3 +179,4 @@
     </li>
   </ol>
 </section>
+

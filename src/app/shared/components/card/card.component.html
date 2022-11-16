@@ -1,27 +1,63 @@
-<ng-container *ngIf="item">
-  <div class="p-4 lg:w-3/4 border border-black my-10 mx-auto">
+<ng-container *ngIf="farmer">
+  <div
+    class="py-20 px-5 lg:w-3/5 border border-black my-10 mx-auto flex justify-center cursor-pointer w-3/4"
+  >
     <div
-      class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+      class="h-full flex sm:flex-row flex-col items-center justify-center text-center sm:text-left w-full"
     >
-      <img
-        alt="team"
-        class="flex-shrink-0 w-1/3 object-cover object-center sm:mb-0 mb-4"
-        src="{{ item.image }}"
-      />
-      <div class="flex-grow sm:pl-8">
+      <div class="w-64 h-64">
+        <img
+          alt=""
+          class="flex-shrink-0 w-full h-full object-cover object-center sm:mb-0 mb-4 rounded-full"
+          src="{{ farmer.image }}"
+        />
+      </div>
+      <div class="sm:pl-8 w-1/2">
         <h2 class="title-font font-medium text-lg text-gray-900">
-          {{ item.content }}
+          {{ farmer.name }}
         </h2>
-        <h3 class="text-gray-500 mb-3">Region</h3>
+        <h3 class="text-gray-500 mb-3">{{ farmer.id }}</h3>
         <hr />
         <br />
 
         <ul class="mb-4 grid grid-cols-2 grid-rows-2">
-          <li class="w-1/2" *ngFor="let region of item.regions">
-            {{ region.name }}
+          <li class="w-1/2" *ngFor="let produce of farmer.produce">
+            {{ produce.name }}
           </li>
         </ul>
-        <button class="px-5 py-2 bg-mainTeal text-white rounded-full">
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="product">
+  <div class="p-4 lg:w-3/4 border border-black my-10 mx-auto cursor-pointer">
+    <div
+      class="h-full flex sm:flex-row flex-col items-center sm:justify-start justify-center text-center sm:text-left"
+    >
+      <img
+        alt=""
+        class="flex-shrink-0 w-1/4 object-cover object-center sm:mb-0 mb-4 rounded-full"
+        src="{{ product.image }}"
+      />
+      <div class="flex-grow sm:pl-8">
+        <h2 class="title-font font-medium text-lg text-gray-900">
+          {{ product.name }}
+        </h2>
+        <h3 class="text-gray-500 mb-3">{{ product.id }}</h3>
+        <hr />
+        <br />
+
+        <ul class="mb-4 grid grid-cols-2 grid-rows-2 w-1/2">
+          <li class="w-1/2" *ngFor="let region of product.regions">
+            {{ region }}
+          </li>
+        </ul>
+        <button
+          class="px-5 py-2 bg-mainTeal text-white rounded-full"
+          *ngIf="product"
+          [routerLink]="['/farmers']"
+        >
           View Farmers
         </button>
       </div>

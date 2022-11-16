@@ -1,3 +1,11 @@
-<app-header></app-header>
-<router-outlet></router-outlet>
-<app-footer></app-footer>
+<ng-container *ngIf="!router.url.includes('admin')">
+  <app-header></app-header>
+</ng-container>
+
+<div class="flex min-h-screen flex-col">
+  <router-outlet></router-outlet>
+</div>
+
+<ng-container class="mt-auto" *ngIf="!router.url.includes('admin')">
+  <app-footer></app-footer>
+</ng-container>
